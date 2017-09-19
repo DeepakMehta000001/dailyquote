@@ -19,7 +19,7 @@
 </head>
 
 <body onload="init()">
-
+<div class="container">
     <center>
     <div id="title_click">
         <div id="morning"><h2>Hello, Hari <br> Good Morning</h2></div>
@@ -28,19 +28,27 @@
 		<div id="night"><h2>Hello, Hari <br> Good Night</h2></div>
         <button type="button"  class = 'btn btn-primary'  onclick="showQuote()">Click here</button>
     </div>
-    <div id="quote" class="Sparkle">
-	Date : Today <br>
-	To Do : Be Happy !
-</div>
+		<div id="quote" class="Sparkle">
+		<!--div id="quote#0">
+		Date : Today <br>
+		To Do : Be Happy !
+		</div-->	
+			<div id="quote#0">
+			Date : Today <br>
+			To Do : Be Happy !
+			</div>	
+		</div>
+		
+	<div>
+		<h3>Today's music</h3>
+		<audio controls>
+		<source src="horse.ogg" type="audio/ogg">
+		<source src="music/song.mp3" type="audio/mpeg">
+		Your browser does not support the audio element.
+		</audio>
+	</div> 
+	</center>
 <div>
-<h3>Today's music</h3>
-<audio controls>
-  <source src="horse.ogg" type="audio/ogg">
-  <source src="music/song.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-</div> 
-</center>
 <script>
 function init(){
     $("#title_click").show();
@@ -60,7 +68,7 @@ function init(){
 		$("#afternoon").show();
 		$("#evening").hide();
 		$("#night").hide();
-	}else if(time >= 16 && time >22){
+	}else if(time >= 16 && time <22){
 		$("#morning").hide();
 		$("#afternoon").hide();
 		$("#evening").show();
