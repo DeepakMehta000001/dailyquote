@@ -29,35 +29,35 @@
         <button type="button"  class = 'btn btn-primary'  onclick="showQuote()">Click here</button>
     </div>
 		<div id="quote" class="Sparkle">
-			<!--div id="quote#0">
+			<div id="quote0">
 			Date : Today <br>
 			To Do : Be Happy !
 			</div>	
-			<div id="quote#1">
+			<div id="quote1">
 				<img src="https://i.pinimg.com/736x/71/3a/7c/713a7cc875e4318153f905059c671580--life-motto-quote-life.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
 			</div>	
-			<div id="quote#2">
+			<div id="quote2">
 				<img src="https://i.pinimg.com/736x/ee/66/57/ee6657ce01069cad4f19d892614099a2--happy-life-quotes-quote-life.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
 			</div>
-			<div id="quote#3">
+			<div id="quote3">
 				<img src="http://40.media.tumblr.com/5d6ed1f8349dfa2c9c6aebe8a964f0c0/tumblr_mzdmkd68ZL1r238sko1_500.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
 			</div>
-			<div id="quote#4">
+			<div id="quote4">
 				<img src="https://i.pinimg.com/736x/78/80/9b/78809bce51185f6f638a89d2efa6d4df--trust-quotes-new-quotes.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
 			</div	>
-			<div id="quote#5">
+			<div id="quote5">
 				<img src="image/quote5.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
 			</div>
-			<div id="quote#6">
+			<div id="quote6">
 				<img src="image/quote6.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
 			</div>
-			<div id="quote#7">
+			<div id="quote7">
 				<img src="https://i.pinimg.com/736x/34/5a/1b/345a1bf70f16728d7f4d4eb2ae150801--try-quotes-rm-drake-quotes.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
 			</div>
-			<div id="quote#8">
+			<div id="quote8">
 				<img src="https://i.pinimg.com/originals/04/4c/01/044c018847bfff3e0f8d373ba8303163.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
-			</div-->
-			<div id="quote#9">
+			</div>
+			<div id="quote9">
 				<img src="https://i.pinimg.com/736x/ef/ea/b0/efeab071cb42afbaa7716f357b511d8d--freedom-tattoos-quotes-for-tattoos.jpg" style="width:350px;height:400px;" class="img-responsive img-rounded">
 			</div>
 		</div>
@@ -111,8 +111,19 @@ function showQuote(){
     $("#title_click").hide();
     $("#quote").show();
 	$("#nextQuote").show();	
-	//var today = new Date();
-	//var time = today.getHours();
+	var no = Math.floor(Math.random() * 10);
+	var quote = "quote";
+	var curr = quote + no.toString();
+	$("#"+curr).show();
+	for(var i=0;i<10;++i){
+		if(i==no)
+			continue
+		curr = quote + i.toString();
+		$("#"+curr).hide();
+		console.log(curr);
+	} 
+	
+	//$("#quote9").hide();
 }
 </script>
 
